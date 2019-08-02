@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<html dir="ltr" lang="en-US">
+			<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+				<meta name="GENERATOR" content="Microsoft SharePoint">
+				<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+				<meta http-equiv="Expires" content="0">
+				<meta name="msapplication-TileImage" content="/_layouts/15/images/SharePointMetroAppTile.png">
+				<meta name="msapplication-TileColor" content="#0072C6">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+				<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+				<title>首页</title>
+				<link rel="stylesheet" type="text/css" href="bosch_background/corev15.css">
+				<link rel="stylesheet" type="text/css" href="bosch_background/searchv15.css">
+				<link rel="stylesheet" type="text/css" href="bosch_background/bosch.css">
+				<link id="CssRegistration1" rel="stylesheet" type="text/css" href="bosch_background/learningPortal.css">
+				<!--首页格式-->
+				<link href="plugins/font-awesome.min.css" rel="stylesheet" type="text/css">
+				<link href="plugins/bootstrap.css" rel="stylesheet" type="text/css">
+				<style type="text/css">
+					html,
+					body {
+						height: 100%;
+						padding: 0;
+						margin: 0;
+					}
+
+					.outer {
+						height: 100%;
+						padding: 0px 0 0;
+						box-sizing: border-box;
+						overflow: hidden
+					}
+
+					.A {
+						height: 100px;
+						margin: 0px 0 0;
+						background: #BBE8F2;
+						overflow: hidden
+					}
+
+					.B {
+						height: 100%;
+						/* background: #D9C666; */
+						overflow: scroll;
+						margin-top: 30px
+					}
+
+					#zz5_TopNavigationMenu ul li {
+						float: left;
+						line-height: 20px;
+						text-align: center;
+						position: relative;
+					}
+
+					#zz5_TopNavigationMenu ul li a {
+						text-decoration: none;
+						color: #000;
+						display: block;
+						padding: 0px 10px;
+					}
+
+					#zz5_TopNavigationMenu ul li ul {
+						position: absolute;
+						display: none;
+					}
+
+					#zz5_TopNavigationMenu ul li ul li {
+						line-height: 20px;
+						text-align: left;
+					}
+
+					#zz5_TopNavigationMenu ul li ul li a {
+						width: 100%;
+					}
+
+					#zz5_TopNavigationMenu ul li ul li a:hover {
+						background-color: #06f;
+					}
+
+					#zz5_TopNavigationMenu ul li:hover ul {
+						display: block
+					}
+
+					.drop-down-content {
+						display: none;
+						padding: 0;
+						position: absolute;
+						z-index: 9999;
+					}
+
+					.footer {
+						height: 20px;
+						margin-top: -25px;
+						text-align: center;
+					}
+
+					/* margin-top（负值的）高度等于footer的height值 */
+				</style>
+			</head>
+	<body>
+		<!--
+上标题
+-->
+		<div class="outer">
+			<div id="ms-designer-ribbon">
+
+				<div>
+
+					<div id="suiteBar" class="ms-dialogHidden noindex">
+						<div id="suiteBarLeft">
+							<div class="ms-table ms-fullWidth">
+								<div class="ms-tableRow">
+									<div class="ms-tableCell ms-verticalAlignMiddle">
+										<div class="ms-core-brandingText">SharePoint</div>
+
+									</div>
+									<div id="DeltaSuiteLinks" class="ms-core-deltaSuiteLinks">
+
+										<div id="suiteLinksBox">
+											<ul class="ms-core-suiteLinkList">
+												<li class="ms-core-suiteLink"><a class="ms-core-suiteLink-a" href="https://mysites.inside-share.bosch.com/default.aspx"
+													 id="ctl00_ctl53_ctl03_ShellNewsfeed"><span>Newsfeed</span></a></li>
+												<li class="ms-core-suiteLink"><a class="ms-core-suiteLink-a" href="https://mysites.inside-share.bosch.com/_layouts/15/MySite.aspx?MySiteRedirect=AllDocuments"
+													 id="ctl00_ctl53_ctl03_ShellDocuments"><span>OneDrive</span></a></li>
+												<li class="ms-core-suiteLink"><a class="ms-core-suiteLink-a" href="https://mysites.inside-share.bosch.com/_layouts/15/MySite.aspx?MySiteRedirect=AllSites"
+													 id="ctl00_ctl53_ctl03_ShellSites"><span>Sites<span id="Suite_ActiveLinkIndicator_Clip" class="ms-suitenav-caratBox"><img
+																 id="Suite_ActiveLinkIndicator" class="ms-suitenav-caratIcon" src="bosch_background/spcommon.png"></span></span></a></li>
+											</ul>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="suiteBarRight">
+							<div id="DeltaSuiteBarRight" class="ms-core-deltaSuiteBarRight">
+								<div id="suiteBarButtons">
+									<a id="welcome_user" style="display:inline-block; margin-top: 20px;">未登录</a>
+									<a id="reset_sec" href="修改密码.html" style="display:inline-block; margin-top: 20px;"><IMG height=20 hspace=10
+										 src="image/修改密码.png" width=20 align=left border=0></a>
+									<a id="log_out" href="登录.html" style="display:inline-block; margin-top: 20px;"><IMG height=18 hspace=10 src="image/退出登录.png"
+										 width=18 align=left border=0></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="s4-ribbonrow" style="height: 35px;">
+						<div id="globalNavBox">
+							<div id="ribbonBox">
+								<div id="s4-ribboncont">
+									<div id="DeltaSPRibbon">
+
+										<div class="ms-cui-ribbonTopBars">
+											<div class="ms-cui-topBar1"></div>
+											<div class="ms-cui-topBar2"><img id="ctl00_onetidHeadbnnr2" class="ms-siteicon-img" name="onetidHeadbnnr0"
+												 src="bosch_background/bosch_logo_new2.png" alt="BOSCH Learning Portal">
+												<h1 id="pageTitle" class="ms-core-pageTitle">员工离职预测系统</h1>
+												<div id="RibbonContainer-TabRowLeft" class="ms-cui-TabRowLeft ms-core-defaultFont ms-dialogHidden">
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<span id="DeltaSPNavigation">
+									<span id="ctl00_ctl53_ctl11_publishingRibbon"></span>
+
+								</span>
+							</div>
+							<div id="DeltaWebPartAdderUpdatePanelContainer" class="ms-core-webpartadder" style="top: 35px;">
+
+								<div id="WebPartAdderUpdatePanelContainer">
+									<div id="ctl00_ctl53_WebPartAdderUpdatePanel">
+
+										<span id="ctl00_ctl53_WebPartAdder"></span>
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div id="notificationArea" class="ms-notif-box"></div>
+					<div id="DeltaPageStatusBar">
+
+						<div id="pageStatusBar" class="ms-status-blue" style="display: none;"></div>
+
+					</div>
+
+				</div>
+
+
+			</div>
+			<div class="B">
+				<!--菜单-->
+				<div class="section">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4">
+								<a href="数据库.html"><img src="image/云数据库.png"></a>
+								<!-- <a><img src="云数据库.png" class="img-responsive"></a> -->
+								<a href="数据库.html">
+									<h3>数据库</h3>
+								</a>
+
+								<p><IMG height=20 hspace=10 src="image/功能.svg" width=20 align=left border=0>数据导入、数据修改、数据展示</p>
+							</div>
+							<div class="col-md-4">
+								<a href="单变量可视化.html"><img src="image/数据可视化.png"></a>
+								<!-- <a><img src="云数据库.png" class="img-responsive"></a> -->
+								<a href="单变量可视化.html">
+									<h3>数据可视化</h3>
+								</a>
+								<p><IMG height=20 hspace=10 src="image/功能.svg" width=20 align=left border=0>一维、二维、多维数据动态可视化</p>
+							</div>
+							<div class="col-md-4">
+								<a href="模型训练.html"><img src="image/AI模型训练.png"></a>
+								<!-- <a><img src="云数据库.png" class="img-responsive"></a> -->
+								<a href="模型训练.html">
+									<h3>模型训练</h3>
+								</a>
+								<p><IMG height=20 hspace=10 src="image/功能.svg" width=20 align=left border=0>选择合适的数据集进行模型训练</p>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-4">
+								<a href="模型预测.html"><img src="image/模型预测.png"></a>
+								<!-- <a><img src="云数据库.png" class="img-responsive"></a> -->
+								<a href="模型预测.html">
+									<h3>模型预测</h3>
+								</a>
+								<p><IMG height=20 hspace=10 src="image/功能.svg" width=20 align=left border=0>预测员工离职情况，进行结果可视化</p>
+							</div>
+							<div class="col-md-4">
+								<a href="报告导出.html"><img src="image/报告.png"></a>
+								<!-- <a><img src="云数据库.png" class="img-responsive"></a> -->
+								<a href="报告导出.html">
+									<h3>报告</h3>
+								</a>
+								<p><IMG height=20 hspace=10 src="image/功能.svg" width=20 align=left border=0>导出报告</p>
+							</div>
+							<!-- <div class="col-md-4"> -->
+							<!-- <a><img src="云数据库.png" class="img-responsive"></a> -->
+							<!-- <h2>A title</h2> -->
+							<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisici elit,&nbsp;</p> -->
+							<!-- </div> -->
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+
+			<!--首页-->
+
+
+
+
+
+			<!--</div>
+	<!--
+上标题
+-->
+			<!--滑动
+-->
+
+
+			<!--
+菜单--->
+
+		</div>
+		<div class="footer">员工离职预测 powered by Bosch Company Initiative</div>
+		<!-- <div class="footer ms-dialogHidden">
+					<span>Learning Portal powered by Bosch Learning Company Initiative
+					</span>
+				</div> -->
+		<script type="text/javascript">
+			$(document).ready(//初始化页面
+				function() {
+					var username = "";
+					username = getCookie("username");
+					//alert(username);
+					welcome_word = "欢迎" + username + "用户！";
+					document.getElementById("welcome_user").innerHTML = welcome_word;
+				})
+
+			function getCookie(name) //获取cookie
+			{
+				if (document.cookie.length > 0) {
+					c_start = document.cookie.indexOf(name + "=");
+					if (c_start != -1) {
+						c_start = c_start + name.length + 1;
+						c_end = document.cookie.indexOf(";", c_start);
+						if (c_end == -1) c_end = document.cookie.length;
+						return unescape(document.cookie.substring(c_start, c_end));
+					}
+				}
+				return "";
+			}
+		</script>
+	</body>
+</html>

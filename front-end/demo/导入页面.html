@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<!-- <meta http-equiv="X-UA-Compatible" content="IE=Edge"> -->
+		<meta name="GENERATOR" content="Microsoft SharePoint">
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Expires" content="0">
+		<meta name="msapplication-TileImage" content="/_layouts/15/images/SharePointMetroAppTile.png">
+		<meta name="msapplication-TileColor" content="#0072C6">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<!-- <link rel="stylesheet" type="text/css" href="bosch_background/corev15.css"> -->
+		<!-- <link rel="stylesheet" type="text/css" href="bosch_background/searchv15.css"> -->
+		<link rel="stylesheet" type="text/css" href="bosch_background/bosch.css">
+		<link id="CssRegistration1" rel="stylesheet" type="text/css" href="bosch_background/learningPortal.css">
+		
+		<title>导入页面</title>
+		<!--首页格式-->
+		<link href="plugins/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="plugins/bootstrap.css" rel="stylesheet" type="text/css">
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+		<!-- <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
+		<!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" -->
+		<!-- rel="stylesheet" type="text/css"> -->
+		<!-- <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" -->
+		<!-- rel="stylesheet" type="text/css"> -->
+		<style type="text/css">
+			#check {
+				color: #ffffff;
+				background-color: #31b0d5!important;
+				border-color: #269abc;
+				width: 40px;
+/* background-color: #4c87ef !important; */
+			}
+			#excelFile{width: 250px;}
+
+			#excelFile,
+			#check {
+				display: inline-block;
+				align: left padding: 5px 10px;
+				font-size: 12px;
+				line-height: 1.5;
+				border-radius: 2px;
+			}
+
+			< !-- #check {
+				-->< !--;
+				-->< !--
+			}
+
+			-->
+		</style>
+		<script type="text/javascript" src="plugins/jQuery/jquery.min.js"></script>
+		<link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet" />
+		<link href="plugins/font-awesome.min.css" rel="stylesheet" type="text/css" />
+		<script src="plugins/bootstrap/js/bootstrap.js"></script>
+
+		<!-- <link rel="import" href="index.html" id="jqGrid"> -->
+		<!-- <script type="text/ecmascript" src="../jqgrid/js_table/table.js"></script> -->
+		
+	</head>
+
+	<body>
+		<div id="header"></div><!-- 头部 -->
+		<div class="section text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<h3 class="text-info">离职员工文件</h3>
+						<!-- <a class="btn btn-block btn-primary" onclick='changeText()'>Action_Position文件</a> -->
+						<a class="btn btn-block btn-primary" id="file1" onclick="show_table(this)" filevalue=" " success_flag=0>Action_Position文件</a>
+						<a class="btn btn-block btn-primary" id="file2" onclick="show_table(this)" filevalue=" " success_flag=0>Address文件</a>
+						<a class="btn btn-block btn-primary" id="file3" onclick="show_table(this)" filevalue=" " success_flag=0>Age_Gender文件</a>
+						<a class="btn btn-block btn-primary" id="file4" onclick="show_table(this)" filevalue=" " success_flag=0>Basepay_Grade文件</a>
+						<a class="btn btn-block btn-primary" id="file5" onclick="show_table(this)" filevalue=" " success_flag=0>Education文件</a>
+						<a class="btn btn-block btn-primary" id="file6" onclick="show_table(this)" filevalue=" " success_flag=0>OT文件</a>
+						<a class="btn btn-block btn-primary" id="file7" onclick="show_table(this)" filevalue=" " success_flag=0>Leave_Report文件</a>
+						<h3 class="text-info">在职员工文件</h3>
+						<a class="btn btn-block btn-primary" id="file8" onclick="show_table(this)" filevalue=" " success_flag=0>Action_Position文件</a>
+						<a class="btn btn-block btn-primary" id="file9" onclick="show_table(this)" filevalue=" " success_flag=0>Address文件</a>
+						<a class="btn btn-block btn-primary" id="file10" onclick="show_table(this)" filevalue=" " success_flag=0>Age_Gender文件</a>
+						<a class="btn btn-block btn-primary" id="file11" onclick="show_table(this)" filevalue=" " success_flag=0>Basepay_Grade文件</a>
+						<a class="btn btn-block btn-primary" id="file12" onclick="show_table(this)" filevalue=" " success_flag=0>Education文件</a>
+						<a class="btn btn-block btn-primary" id="file13" onclick="show_table(this)" filevalue=" " success_flag=0>OT文件</a>
+						<a class="btn btn-block btn-primary" id="file14" onclick="show_table(this)" filevalue=" " success_flag=0>Leave_Report文件</a>
+						<br>
+						<br>
+						<a class="active btn btn-info btn-lg" onclick="submit_all()">提交</a>
+					</div>
+					<div class="col-md-10 text-center">
+						<h3 id="file_title">请选择左侧在职或离职文件</h3>
+						<h4 align="left" id="file_act">请上传左侧在职或离职文件进行操作:</h4>
+						<form method="post" id="file" action="" enctype="multipart/form-data" class="text-left">
+							<!-- <h3>选择一个文件:</h3> -->
+							<input id="excelFile" type="file" name="uploadFile" multiple="multiple">
+							<input id="check" type="button" value="上传" class="btn btn-sm btn-success" onclick="uploadFiles(this)" data-value=''>
+							<!-- onclick="uploadFiles(this)"> -->
+							<a id="check_data" type="button" class="btn btn-info btn-sm" onclick="check_data(this)">查验</a>
+							<a class="btn btn-danger btn-sm">清空</a>
+						</form>
+						<!-- <a class="btn btn-danger btn-sm">清空</a> -->
+						<!-- <a class="btn btn-sm btn-success">查验</a> -->
+						<br>
+						<!-- <div id="table1" table-name='' display='none'></div> -->
+						<table id="table" temination='' name='table'></table>
+
+						<!-- <div id="jqGridPager"></div> -->
+					</div>
+					<!-- <a class="btn btn-info btn-sm">保存</a> -->
+				</div>
+			</div>
+		</div>
+		<script src="js/main.js"></script>
+		<script src="js/Action_table.js"></script>
+		<script src="js/Address_table.js"></script>
+		<script src="js/Age_table.js"></script>
+		<script src="js/Basepay_table.js"></script>
+		<script src="js/Education_table.js"></script>
+		<script src="js/OT_table.js"></script>
+		<script src="js/Leave_table.js"></script>
+		<script type="text/javascript">
+			$("#header").load("page/header.html");
+		</script>
+		<script type="text/javascript">
+			<!-- function changeText(){ -->
+			<!-- document.getElementById('boldStuff').innerHTML = 'Fred Flinstone'; -->
+			<!-- } -->
+			var flag = new Array(14); //固定数组长度为3;是否加载判断标志位
+			flag[0] = 1;
+			var termination = 0; //设置默认离职状态
+			$(document).ready(
+				function() {
+
+					$.ajax({
+						url: ip + '/demo/validate/status',
+						method: "get",
+						data: {},
+						async: false,
+						//async属性默认为true,即异步请求。当为同步请求时JS代码加载到当前AJAX的时候会把页面里所有的代码停止加载，页面出现假死状态，当这个AJAX
+						//执行完毕后才会继续运行其他代码页面假死状态解除。而异步则这个AJAX代码运行中的时候其他代码一样可以运行。
+						success: function(data) {
+							if (data.code == "200") {
+								flag[0] = data.data.TERMINATION_ACTION_POSITION;
+								flag[1] = data.data.TERMINATION_ADDRESS;
+								flag[2] = data.data.TERMINATION_AGE_GENDER;
+								flag[3] = data.data.TERMINATION_BASEPAY_GRADE;
+								flag[4] = data.data.TERMINATION_EDUCATION;
+								flag[5] = data.data.TERMINATION_OT;
+								flag[6] = data.data.TERMINATION_LEAVE_REPORT;
+								flag[7] = data.data.ACTIVE_ACTION_POSITION;
+								flag[8] = data.data.ACTIVE_ADDRESS;
+								flag[9] = data.data.ACTIVE_AGE_GENDER;
+								flag[10] = data.data.ACTIVE_BASEPAY_GRADE;
+								flag[11] = data.data.ACTIVE_EDUCATION;
+								flag[12] = data.data.ACTIVE_OT;
+								flag[13] = data.data.ACTIVE_LEAVE_REPORT;
+
+							}
+						},
+					});
+					//alert(flag[0]);
+					change_color() //变色函数
+				}
+			);
+			//变色函数
+			function change_color() {
+				//flag[13]=1;
+				for (var i = 0; i < 14; i++) {
+					if (flag[i] == 1) {
+						//alert(flag[i]);
+						filei = i + 1;
+						var file_id = "file" + filei;
+						document.getElementById(file_id).className = 'btn btn-block btn-success'; //替换成一个通过的class
+					}
+				}
+
+			}
+
+
+			$("#table")[0].style.display = 'none';
+
+			function show_table(file_but) {
+				//选择加载表格页面及获取文件名
+				filename = get_filename(file_but);
+				//展示标题
+				show_title(filename);
+				//将filename传递到upload,判断格式
+				var inp = document.getElementById("check");
+				inp.setAttribute("data-value", filename);
+				// 设置分页栏的点击事件以及何时会发生高亮
+				/*$("#pagination").on("click", "li", function() {
+					var aText = $(this).find('a').html(); //假如左侧分页栏是 "上一页 1 2 下一页"，则这里就是4个<li>，
+					checkA(); //首先要确定能否上一页或者下一页
+					if (aText == "上一页") {
+						$(".pagination > li").removeClass("active"); //移除所有的li标签的active
+						$("#page" + (currentPage - 1)).addClass("active");
+						$(".userListTable tbody").empty(); //清空.userListTable tbody的所有子元素
+						getList(currentPage - 1, size);
+						checkA();
+
+					} else if (aText == "下一页") {
+						$(".pagination > li").removeClass("active");
+						$("#page" + (currentPage + 1)).addClass("active");
+						$(".userListTable tbody").empty();
+						getList(currentPage + 1, size);
+						//alert(currentPage);
+						alert(currentPage);
+						checkA();
+					} else {
+						$(".pagination > li").removeClass("active");
+						$(this).addClass("active");
+						$(".userListTable tbody").empty();
+						getList($(this).text(), size);
+						checkA();
+					}
+				})*/
+
+				//termination="false"
+				//i=document.querySelector("table[name='table']").getAttribute("temination")
+				//alert(i);
+
+			}
+			/* $("#file2").click(
+				function() {
+					document.querySelector("table[name='table']").id = "table2";
+					//$('div').attr('id','myDivId_new');
+					$("#table2")[0].style.display = ''; 
+				    $("#table2").load("table2.html"); 
+					}) */
+
+			<!-- console.log(index.import.body.innerHTML); -->
+			//文件名及html插入获取函数
+			function get_filename(file_but) {
+				// alert(file_but.id);
+				if (file_but.id == "file1") {
+					var filename = 'TERMINATION_Action_Position';
+					//var table_inp=document.querySelector("table[name='table']"); 
+					//table_inp.id="table1"
+					document.querySelector("table[name='table']").id = "table1"; //改变id
+					termination = 1;
+					flag_num = 0; //flag_num标志第n+1个文件
+					// table_inp.setAttribute("temination",'1');
+					//$('div').attr('id','myDivId_new');
+					$("#table1")[0].style.display = ''; //处于显示状态
+					$("#table1").load("page/Action_table.html"); //加载表格html
+					if (flag[0] == 1) {
+						alert('TERMINATION_Action_Position文件已完成修改');
+					} else if (flag[0] == 0) {
+						action_getList(currentPage, size); //加载表格数据1
+						action_page(); //加载分页
+						if (total == 0) {
+							//alert(flag[0]);
+							alert('请上传TERMINATION_Action_Position文件！');
+						}
+					}
+					//提示
+
+				} else if (file_but.id == "file2") {
+					var filename = 'TERMINATION_Address';
+					document.querySelector("table[name='table']").id = "table2";
+					termination = 1;
+					flag_num = 1; //flag_num标志第n+1个文件
+					//$('div').attr('id','myDivId_new');
+					$("#table2")[0].style.display = '';
+					$("#table2").load("page/Address_table.html");
+					if (flag[1] == 1) {
+						alert('TERMINATION_Address文件已完成修改');
+					} else if (flag[1] == 0) {
+						address_getList(currentPage, size); //加载表格数据1
+						address_page(); //加载分页
+						if (total == 0) {
+							//alert(flag[1]);
+							alert('请上传TERMINATION_Address文件！');
+						}
+					}
+					//getList(currentPage, size);
+					//show_title(filename)
+					//return filename
+
+				} else if (file_but.id == "file3") {
+					var filename = 'TERMINATION_Age_Gender';
+					document.querySelector("table[name='table']").id = "table3";
+					//document.querySelector("table[name='table']").setAttribute("temination",'1');
+					termination = 1;
+					flag_num = 2; //flag_num标志第n+1个文件
+					$("#table3")[0].style.display = '';
+					$("#table3").load("page/Age_table.html");
+					if (flag[2] == 1) {
+						alert('TERMINATION_Age_Gender文件已完成修改');
+					} else if (flag[2] == 0) {
+						age_getList(currentPage, size); //加载表格数据1
+						age_page(); //加载分页
+						if (total == 0) {
+							//alert(flag[0]);
+							alert('请上传TERMINATION_Age_Gender文件！');
+						}
+					}
+					//getList(currentPage, size);
+
+				} else if (file_but.id == "file4") {
+					var filename = 'TERMINATION_Basepay_Grade';
+					document.querySelector("table[name='table']").id = "table4";
+					termination = 1;
+					flag_num = 3; //flag_num标志第n+1个文件
+					$("#table4")[0].style.display = '';
+					$("#table4").load("page/Basepay_table.html");
+					if (flag[3] == 1) {
+						alert('TERMINATION_Action_Position文件已完成修改');
+					} else if (flag[3] == 0) {
+						basepay_getList(currentPage, size); //加载表格数据1
+						basepay_page(); //加载分页
+						if (total == 0) {
+							//alert(flag[0]);
+							alert('请上传TERMINATION_Action_Position文件！');
+						}
+					}
+
+				} else if (file_but.id == "file5") {
+					var filename = 'TERMINATION_Education';
+					document.querySelector("table[name='table']").id = "table5";
+					termination = 1;
+					flag_num = 4; //flag_num标志第n+1个文件
+					//$('div').attr('id','myDivId_new');
+					$("#table5")[0].style.display = '';
+					$("#table5").load("page/Education_table.html");
+					if (flag[4] == 1) {
+						alert('TERMINATION_Education文件已完成修改');
+					} else if (flag[4] == 0) {
+						education_getList(currentPage, size); //加载表格数据1
+						education_page(); //加载分页
+						if (total == 0) {
+							//alert(flag[0]);
+							alert('请上传TERMINATION_Education文件！');
+						}
+					}
+
+				} else if (file_but.id == "file6") {
+					var filename = 'TERMINATION_OT';
+					document.querySelector("table[name='table']").id = "table6";
+					termination = 1;
+					flag_num = 5; //flag_num标志第n+1个文件
+					//$('div').attr('id','myDivId_new');
+					$("#table6")[0].style.display = '';
+					$("#table6").load("page/OT_table.html");
+					if (flag[5] == 1) {
+						alert('TERMINATION_OT文件已完成修改');
+					} else if (flag[5] == 0) {
+						ot_getList(currentPage, size); //加载表格数据1
+						ot_page(); //加载分页
+						if (total == 0) {
+							//alert(flag[0]);
+							alert('请上传TERMINATION_OT文件！');
+						}
+					}
+
+				} else if (file_but.id == "file7") {
+					var filename = 'TERMINATION_Leave_Report';
+					document.querySelector("table[name='table']").id = "table7";
+					termination = 1;
+					flag_num = 6; //flag_num标志第n+1个文件
+					$("#table7")[0].style.display = '';
+					$("#table7").load("page/Leave_table.html");
+					if (flag[6] == 1) {
+						alert('TERMINATION_Leave_Report文件已完成修改');
+					} else if (flag[6] == 0) {
+						leave_getList(currentPage, size); //加载表格数据1
+						leave_page(); //加载分页
+						if (total == 0) {
+							//alert(flag[0]);
+							alert('请上传TERMINATION_Leave_Report文件！');
+						}
+					}
+
+				}
+				if (file_but.id == "file8") {
+					var filename = 'Active_Action_Position';
+					document.querySelector("table[name='table']").id = "table1";
+					termination = 0;
+					flag_num = 7;
+					$("#table1")[0].style.display = '';
+					$("#table1").load("page/Action_table.html");
+					if (flag[7] == 1) {
+						alert('Active_Action_Position文件已完成修改');
+					} else if (flag[7] == 0) {
+						action_getList(currentPage, size); //加载表格数据1
+						action_page(); //加载分页
+						if (total == 0) {
+							//alert(flag[0]);
+							alert('请上传Active_Action_Position文件！');
+						}
+					}
+					//getList(currentPage, size); //加载表格数据1
+				} else if (file_but.id == "file9") {
+					var filename = 'Active_Address';
+					document.querySelector("table[name='table']").id = "table2";
+					termination = 0;
+					flag_num = 8; //flag_num标志第n+1个文件
+					$("#table2")[0].style.display = '';
+					$("#table2").load("page/Address_table.html");
+					if (flag[8] == 1) {
+						alert('Active_Address文件已完成修改');
+					} else if (flag[8] == 0) {
+						address_getList(currentPage, size); //加载表格数据1
+						address_page(); //加载分页
+						if (total == 0) {
+							alert('请上传Active_Address文件！');
+						}
+					}
+					//show_title(filename)
+					//return filename
+
+				} else if (file_but.id == "file10") {
+					var filename = 'Active_Age_Gender';
+					document.querySelector("table[name='table']").id = "table3";
+					termination = 0;
+					flag_num = 9; //flag_num标志第n+1个文件
+					$("#table3")[0].style.display = '';
+					$("#table3").load("page/Age_table.html");
+					if (flag[9] == 1) {
+						alert('Active_Age_Gender文件已完成修改');
+					} else if (flag[9] == 0) {
+						age_getList(currentPage, size); //加载表格数据1
+						age_page(); //加载分页
+						if (total == 0) {
+							alert('请上传Active_Age_Gender文件！');
+						}
+					}
+
+				} else if (file_but.id == "file11") {
+					var filename = 'Active_Basepay_Grade';
+					document.querySelector("table[name='table']").id = "table4";
+					termination = 0;
+					flag_num = 10; //flag_num标志第n+1个文件
+					$("#table4")[0].style.display = '';
+					$("#table4").load("page/Basepay_table.html");
+					if (flag[10] == 1) {
+						alert('Active_Basepay_Grade文件已完成修改');
+					} else if (flag[10] == 0) {
+						basepay_getList(currentPage, size); //加载表格数据1
+						basepay_page(); //加载分页
+						if (total == 0) {
+							//alert(flag[0]);
+							alert('请上传Active_Basepay_Grade文件！');
+						}
+					}
+				} else if (file_but.id == "file12") {
+					var filename = 'Active_Education';
+					document.querySelector("table[name='table']").id = "table5";
+					termination = 0;
+					flag_num = 11; //flag_num标志第n+1个文件
+					$("#table5")[0].style.display = '';
+					$("#table5").load("page/Education_table.html");
+					if (flag[11] == 1) {
+						alert('Active_Basepay_Grade文件已完成修改');
+					} else if (flag[11] == 0) {
+						education_getList(currentPage, size); //加载表格数据1
+						education_page(); //加载分页
+						if (total == 0) {
+							//alert(flag[0]);
+							alert('请上传Active_Education文件！');
+						}
+					}
+				} else if (file_but.id == "file13") {
+					var filename = 'Active_OT';
+					document.querySelector("table[name='table']").id = "table6";
+					termination = 0;
+					flag_num = 12; //flag_num标志第n+1个文件
+					$("#table6")[0].style.display = '';
+					$("#table6").load("page/OT_table.html");
+					if (flag[12] == 1) {
+						alert('Active_OT文件已完成修改');
+					} else if (flag[12] == 0) {
+						ot_getList(currentPage, size); //加载表格数据1
+						ot_page(); //加载分页
+						if (total == 0) {
+							//alert(flag[0]);
+							alert('请上传Active_OT文件！');
+						}
+					}
+
+				} else if (file_but.id == "file14") {
+					var filename = 'Active_Leave_Report';
+					document.querySelector("table[name='table']").id = "table7";
+					termination = 0;
+					flag_num = 13; //flag_num标志第n+1个文件
+					$("#table7")[0].style.display = '';
+					$("#table7").load("page/Leave_table.html");
+					if (flag[13] == 1) {
+						alert('Active_Leave_Report文件已完成修改');
+					} else if (flag[13] == 0) {
+						leave_getList(currentPage, size); //加载表格数据1
+						leave_page(); //加载分页
+						if (total == 0) {
+							//alert(flag[0]);
+							alert('请上传Active_Leave_Report文件！');
+						}
+					}
+
+				}
+
+				return filename
+			}
+
+			//显示标题
+			function show_title(filename) {
+
+				return document.getElementById("file_title").innerHTML = filename + '文件',
+					document.getElementById("file_act").innerHTML = '请上传' + filename + '文件进行操作';
+			}
+
+			function uploadFiles(upload_but) { //判断上传状态
+				// 	var uploadFile = $('#excelFile').get(0).files[0];
+				//filename=e.getAttribute("filevalue");
+				var inp = document.getElementById(upload_but.id);
+				filename = inp.attributes["data-value"].nodeValue;
+				//alert(flag[flag_num]); 
+
+				if (flag[flag_num] == 1 || total != 0) {
+					if (window.confirm('是否确定重新上传？重新上传将覆盖之前数据！')) {
+						submitfile();
+						//确定覆盖
+						return true;
+					} else {
+						
+						//  取消覆盖
+						return false;
+					}
+					//alert("是否确定重新上传");
+				} //确定取消操作函数
+				submitfile();
+
+			}
+
+			function submitfile() {
+				var file = $('#excelFile').val();
+				if (file === '') {
+					alert('请选择文件');
+					return false;
+				}
+				var reg = RegExp(filename);
+				error_input = '请输入' + filename + '文件!';
+				//判断上传文件是否正确;
+				if (reg.test(file) == false) {
+					alert(error_input);
+					return false;
+				}
+				var fileType = (file.substring(file
+						.lastIndexOf(".") + 1, file.length))
+					.toLowerCase();
+				if (fileType !== 'xls' && fileType !== 'xlsx') {
+					alert('文件格式不正确，excel文件！');
+					return false;
+				}
+				var uploadFile = new FormData($("#file")[0]);
+				//不等于-1表示该字符串包含子字符串。
+
+
+				//console.log(uploadFile.getAll("uploadFile"));
+				if ("undefined" != typeof(uploadFile) && uploadFile != null && uploadFile != "") {
+					$.ajax({
+						url: ip + '/demo/file/import',
+						type: 'POST',
+						data: uploadFile,
+						async: false,
+						cache: false,
+						contentType: false, //不设置内容类型
+						processData: false, //不处理数据
+						success: function(data) {
+							console.log(data);
+							alert(data.message);
+						},
+						error: function() {
+							alert("上传失败！");
+						}
+					})
+				} else {
+					alert("选择的文件无效！请重新选择");
+				}
+
+			}
+			//校验开始
+			function check_data(chek_but) {
+				if (flag[flag_num] == 1) {
+					alert("您已成功修改文件！");
+				} else {
+					if (total == 0) {
+						alert("请先上传文件！");
+						return false;
+					} else { //此处需要post请求,进行校验操作
+						$(".userListTable tbody").empty(); //清空表格
+						getList(flag_num); //getlist函数
+						if (total == 0) {
+							flag[flag_num] = 1;
+							change_color();
+						}
+					}
+				}
+			}
+			
+			//14个表格提交
+			function submit_all() {
+				var sum_flag;
+				//alert("hello!");
+				for (i = 0; i < 14; i++) {
+					sum_flag += flag[i];
+				}
+				if (sum_flag == 14) {
+					$.ajax({
+						url: ip + '/demo/validate/submit',
+						type: 'GET',
+						data: {},
+						async: false,
+						cache: false,
+						contentType: false, //不设置内容类型
+						processData: false, //不处理数据
+						success: function(data) {
+							if (data.code == 200) {
+								//console.log(data);
+								//alert(data.message);
+								window.location.href = "首页.html";
+							}
+						},
+						error: function() {
+							alert("提交失败！");
+						}
+					})
+				} else {
+					alert("请检查所以文件已完成修改！");
+				}
+			}
+			
+			//getlist函数
+			function getList(flag_num) {
+				if (flag_num == 0 || flag_num == 7) {
+					action_getList(currentPage, size);
+				} else if (flag_num == 1 || flag_num == 8) {
+					address_getList(currentPage, size);
+				} else if (flag_num == 2 || flag_num == 9) {
+					age_getList(currentPage, size);
+				} else if (flag_num == 3 || flag_num == 10) {
+					basepay_getList(currentPage, size);
+				} else if (flag_num == 4 || flag_num == 11) {
+					education_getList(currentPage, size);
+				} else if (flag_num == 5 || flag_num == 12) {
+					ot_getList(currentPage, size);
+				} else if (flag_num == 6 || flag_num == 13) {
+					leave_getList(currentPage, size);
+				}
+			}
+			// $('.btn btn-block btn-primary').on('click', function(){
+			// 	alert(this.id);
+			// 	// if (this.id=="file1") {var filename='Action_Position1';
+			// 	// document.getElementById('boldStuff').innerHTML =filename +'文件';}
+			// 	
+			// })
+			// $('#file1').on('click', function(){
+			// //改变标题
+			// var filename='Action_Position'
+			// document.getElementById('boldStuff').innerHTML =filename +'文件';
+
+			//改变提醒
+			//})
+		</script>
+
+	</body>
+
+</html>

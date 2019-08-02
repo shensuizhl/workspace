@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <meta charset="utf-8"> -->
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+    <!-- <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script> -->
+    <!-- <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script> -->
+    <!-- <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&amp;ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&amp;__ec_v__=20190126"></script><script type="text/javascript" src="https://api.map.baidu.com/getscript?v=2.0&amp;ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&amp;services=&amp;t=20190123111209"></script> -->
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 1000px;height:80px;"></div>
+    <script src="process_bar.js"></script>
+</body>
+</html>

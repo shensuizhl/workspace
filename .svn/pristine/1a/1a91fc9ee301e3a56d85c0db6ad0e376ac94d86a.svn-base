@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+ <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+ <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script
+     src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js">   
+</script>
+</head>
+<body>
+<!-- Plotly chart will be drawn inside this div -->
+ <div id="plotly-div" style="width: 600px;height:400px;"></div>
+ <!-- <script type="text/javascript" src="data.json"></script> -->
+ <script src="bar_localdata.js"></script>
+ <!-- // JAVASCRIPT CODE GOES HERE -->
+
+
+ </body>
+ </html>

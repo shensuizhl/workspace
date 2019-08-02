@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+			<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+				<meta name="GENERATOR" content="Microsoft SharePoint">
+				<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+				<meta http-equiv="Expires" content="0">
+				<meta name="msapplication-TileImage" content="/_layouts/15/images/SharePointMetroAppTile.png">
+				<meta name="msapplication-TileColor" content="#0072C6">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+				<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+				<link rel="stylesheet" type="text/css" href="bosch_background/corev15.css">
+				<link rel="stylesheet" type="text/css" href="bosch_background/searchv15.css">
+				<link rel="stylesheet" type="text/css" href="bosch_background/bosch.css">
+				<link id="CssRegistration1" rel="stylesheet" type="text/css" href="bosch_background/learningPortal.css">
+				<!--首页格式-->
+				<link href="plugins/font-awesome.min.css" rel="stylesheet" type="text/css">
+				<link href="plugins/bootstrap.css" rel="stylesheet" type="text/css">
+		</head>
+	<body>
+		<!--
+上标题
+-->
+		<div id="ms-designer-ribbon">
+
+			<div>
+
+				<div id="suiteBar" class="ms-dialogHidden noindex">
+					<div id="suiteBarLeft">
+						<div class="ms-table ms-fullWidth">
+							<div class="ms-tableRow">
+								<div class="ms-tableCell ms-verticalAlignMiddle">
+									<div class="ms-core-brandingText">SharePoint</div>
+
+								</div>
+								<div id="DeltaSuiteLinks" class="ms-core-deltaSuiteLinks">
+
+									<div id="suiteLinksBox">
+										<ul class="ms-core-suiteLinkList">
+											<li class="ms-core-suiteLink"><a class="ms-core-suiteLink-a" href="https://mysites.inside-share.bosch.com/default.aspx"
+												 id="ctl00_ctl53_ctl03_ShellNewsfeed"><span>Newsfeed</span></a></li>
+											<li class="ms-core-suiteLink"><a class="ms-core-suiteLink-a" href="https://mysites.inside-share.bosch.com/_layouts/15/MySite.aspx?MySiteRedirect=AllDocuments"
+												 id="ctl00_ctl53_ctl03_ShellDocuments"><span>OneDrive</span></a></li>
+											<li class="ms-core-suiteLink"><a class="ms-core-suiteLink-a" href="https://mysites.inside-share.bosch.com/_layouts/15/MySite.aspx?MySiteRedirect=AllSites"
+												 id="ctl00_ctl53_ctl03_ShellSites"><span>Sites<span id="Suite_ActiveLinkIndicator_Clip" class="ms-suitenav-caratBox"><img
+															 id="Suite_ActiveLinkIndicator" class="ms-suitenav-caratIcon" src="bosch_background/spcommon.png"></span></span></a></li>
+										</ul>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="s4-ribbonrow" style="height: 35px;">
+					<div id="globalNavBox">
+						<div id="ribbonBox">
+							<div id="s4-ribboncont">
+								<div id="DeltaSPRibbon">
+
+									<div class="ms-cui-ribbonTopBars">
+										<div class="ms-cui-topBar1"></div>
+										<div class="ms-cui-topBar2"><img id="ctl00_onetidHeadbnnr2" class="ms-siteicon-img" name="onetidHeadbnnr0"
+											 src="bosch_background/bosch_logo_new2.png" alt="BOSCH Learning Portal">
+											<h1 id="pageTitle" class="ms-core-pageTitle">员工离职预测系统</h1>
+											<div id="RibbonContainer-TabRowLeft" class="ms-cui-TabRowLeft ms-core-defaultFont ms-dialogHidden">
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<span id="DeltaSPNavigation">
+								<span id="ctl00_ctl53_ctl11_publishingRibbon"></span>
+
+							</span>
+						</div>
+						<div id="DeltaWebPartAdderUpdatePanelContainer" class="ms-core-webpartadder" style="top: 35px;">
+
+							<div id="WebPartAdderUpdatePanelContainer">
+								<div id="ctl00_ctl53_WebPartAdderUpdatePanel">
+
+									<span id="ctl00_ctl53_WebPartAdder"></span>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div id="notificationArea" class="ms-notif-box"></div>
+				<div id="DeltaPageStatusBar">
+
+					<div id="pageStatusBar" class="ms-status-blue" style="display: none;"></div>
+
+				</div>
+
+			</div>
+
+
+
+
+		</div>
+
+	</body>
+</html>

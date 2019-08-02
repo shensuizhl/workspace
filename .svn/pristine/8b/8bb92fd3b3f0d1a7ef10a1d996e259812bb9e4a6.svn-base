@@ -1,0 +1,86 @@
+ip = "http://192.168.1.110:8080";
+$("#form_reset").on("click", "#btn_reset", function(e) {
+	//alert('123')
+	var radioValue = $('input:radio[name="kind"]:checked').val();
+	var formData = $("#form_reset").serialize();
+	var re = /^(?=.*\d)(?=.*[a-zA-Z])[\da-zA-Z]{6,}$/;
+
+	// console.log($("#oldpassword").val())
+	// console.log($("#newpassword").val())
+	username = $("#userName").val()
+	oldpassword = $("#oldpassword").val()
+	newpassword = $("#newpassword").val()
+	newpassword1 = $("#newpassword1").val()
+	<!-- var token = document.cookie.split(";")[0];  -->
+	if (username = "") {
+		alert("未输入用户名");
+	} else if (newpassword.length < 6) {
+		alert("新密码必须大于6位");
+	} else if (newpassword.length < 6) {
+		alert("新密码必须大于6位");
+	} else if (!re.test(newpassword)) {
+		alert("格式错误,必须包含英文字母和数字");
+	} else if (newpassword != newpassword1) {
+		alert("两次密码输入不一致");
+	} else {
+		$.ajax({
+			url: ip + "/demo/user/pwd/reset",
+			/* 地址*/
+			type: "post",
+			data: {
+				"username": $("#userName").val(),
+				"old_password": $("#oldpassword").val(),
+				"new_password": $("#newpassword").val()
+			},
+			dataType: "json",
+			headers: {
+				"Authorization": document.cookie.split(";")[0]
+			},
+			success: function(result) {
+				console.log(result.success);
+				if (200 == result.code) {
+					window.location.href = "登录.html";
+				} else {
+					alert(result.error);
+				}
+			}
+		})
+	}
+})
+$("#form_login").on("click", "#btn_login", function(e) {
+	var radioValue = $('input:radio[name="kind"]:checked').val();
+	var formData = $("#form_login").serialize();
+	$.ajax({
+		url: ip + "/demo/user/login",
+		/* 地址*/
+		type: "post",
+		data: {
+			"username": $("#username").val(),
+			"password": $("#password").val()
+		},
+		dataType: "json",
+		success: function(result) {
+			console.log(result.code);
+			document.cookie = result.data.tokenHead + " " + result.data.token;
+			if (200 == result.code) {
+				window.location.href = "首页.html";
+			} else {
+				alert(result.error);
+			}
+		}
+	})
+})
+
+//把用户名保存到cookie
+function setCookie(name,value,expiredays)
+{
+var exdate=new Date();
+exdate.setDate(exdate.getDate()+expiredays);
+document.cookie=name+ "=" +escape(value)+((expiredays==null) ? "" : ";expires="+exdate.toGMTString());//创建cookie
+}
+function saveCookie(){//保存cookie
+var UName=document.getElementById("username");
+//var PName=document.getElementById("password");
+setCookie(UName.id,UName.value,30);
+//setCookie(PName.id,PName.value,30);
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>模型训练</title>
+		<script type="text/javascript" src="plugins/jQuery/jquery.min.js"></script>
+		<link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<script src="plugins/bootstrap/js/bootstrap.js"></script>
+		
+		<link href="plugins/font-awesome.min.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+		<div id="header"></div><!-- 头部 -->
+		<!-- <div class="section"> -->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<a class="active btn btn-info" onclick="start_training()" id="train_but">开始训练</a>
+						<!-- <p class="text-center" id="show_notdata">提示：新加入2019-6数据待训练</p><!-- <提示：暂无新数据！-->
+					</div>
+
+					<h3 class="text-left text-primary">训练结果显示</h3>
+					<!-- <br> -->
+				</div>
+			<!-- </div> -->
+			<!-- <div class="row text-left"></div>
+			<div class="row">
+				<div class="col-md-12 text-center"></div>
+			</div> -->
+		</div>
+
+		<div class="section" id="training_result"> </div>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+		<script type="text/javascript" src="js/training_model.js">
+		</script>
+		<script type="text/javascript" src="js/process_bar.js">
+		</script>
+			<script type="text/javascript">
+			$("#header").load("page/header.html");
+		</script>
+	</body>
+
+</html>

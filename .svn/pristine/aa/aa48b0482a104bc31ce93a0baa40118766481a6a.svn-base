@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		.A{height:100%;box-sizing:border-box}
+		.divcss5-hidden,.divcss5-scroll{display：block;line-height:25px; border:none} 
+.divcss5-hidden{overflow:hidden; height:50px} 
+.divcss5-scroll{overflow:scroll;height: 100%; margin-top:10px} 
+		</style>
+	</head>
+<body>
+</div class="A"> 
+     <div class="divcss5-hidden"> 
+     隐藏超出的内容但不显示滚动,divcss5的overflow:hidden       测试示范 案例，设置了高和宽后对象，内容多不超出对象 
+     </div > 
+    <div class="divcss5-scroll"> 
+    <img src="http://www.divcss5.com/uploads/allimg/130219/1_130219231214_1.jpg" /> 
+    </div> 
+</div> 
+</body>
+</html>

@@ -1,0 +1,740 @@
+            
+###Search EMPLOYEE table [GET]
+
++ Request (application/json)
+
+        {
+            "page":1,
+            "rows":5,
+        }
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+        Location: /table/search/employee
+
+    + Body
+
+            {
+                "code": 200,
+                "message": "操作成功",
+                "data": {
+                    "dataList": [
+                        {
+                            "perNumber": "BBBBBBBB",
+                            "termination": true,
+                            "importTime": "2019-06-27 00:20:15",
+                            "locChangeStatus": "2019-06-27 00:20:15",
+                            "address": "SOUTH PARK",
+                            "distance": 5.1,
+                            "institution": "FIRSTUNIV",
+                            "yearOfGraduation": "2019-06-27 00:20:15",
+                            "certificate": "bachelor",
+                            "starLevel": "4",
+                            "locationOfUniversity": "shanghai",
+                            "ageOfEmployee": 32,
+                            "birthDate": "2019-06-27 00:20:15",
+                            "genderKey": "female",
+                            "maritalStatusKey": "single",
+                            "noCh": 3,
+                            "payment": 12,
+                            "grade": 5,
+                            "gradeChangePer": 2,
+                            "paymentChangePer": 0,
+                            "organizationUnit": "PJ/NLI",
+                            "position": "MANAGER",
+                            "yearOfWork": 4,
+                            "terminationDate": "2019-06-27 00:20:15",
+                            "yearOfCurrentPosition": 2
+                        }
+                    ],
+                    "currentCount": 1,
+                    "page": 1,
+                    "totalCount": 1
+                }
+            }
+        
+###Modify EMPLOYEE table [POST]
+
++ Request (application/json)
+
+        {
+            "perNumber": "BBBBBBBB",
+            "termination": true,
+            "importTime": "2019-06-27 00:20:15",
+            "locChangeStatus": "2019-06-27 00:20:15",
+            "address": "SOUTH PARK",
+            "distance": 5.1,
+            "institution": "FIRSTUNIV",
+            "yearOfGraduation": "2019-06-27 00:20:15",
+            "certificate": "bachelor",
+            "starLevel": "4",
+            "locationOfUniversity": "shanghai",
+            "ageOfEmployee": 32,
+            "birthDate": "2019-06-27 00:20:15",
+            "genderKey": "female",
+            "maritalStatusKey": "single",
+            "noCh": 3,
+            "payment": 12,
+            "grade": 5,
+            "gradeChangePer": 2,
+            "paymentChangePer": 0,
+            "organizationUnit": "PJ/NLI",
+            "position": "MANAGER",
+            "yearOfWork": 4,
+            "terminationDate": "2019-06-27 00:20:15",
+            "yearOfCurrentPosition": 2
+        }
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+        Location: /table/search/employee
+
+    + Body
+
+            {
+              "code":200,
+              "message":"操作成功",
+              "data":"修改成功"
+          }
+            
+    
+    
+    
+### Search ACTION_POSITION [GET]
+
++ Request (application/json)
+
+        {
+            "termination": 0,
+            "type": "ACTION_POSITION",
+            "page":1,
+            "rows":10,
+        }
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /table/search/tmp
+
+    + Body
+
+            {
+                "code": 200,
+                "message": "操作成功",
+                "data": {
+                    "dataList": [
+                        {
+                            "actionId": 1,
+                            "userId": 1,
+                            "termination": false,
+                            "importTime": "2019-06-26 14:55:32",
+                            "perNumber": "LLLLLLLL",
+                            "organizationUnit": "TQI",
+                            "startDate": "2019-06-26 22:55:32",
+                            "endDate": "2019-06-26 22:55:32",
+                            "actionType": "RE-HIRING",
+                            "reasonForAction": "RESIGNMENT",
+                            "last": "2019-06-26 22:55:32",
+                            "entry": "2019-06-26 22:55:32",
+                            "startDate1": "2019-06-26 22:55:32",
+                            "endDate1": "2019-06-26 22:55:32",
+                            "position": "MANAGER"
+                        }
+                    ],
+                    "currentCount": 1,
+                    "page": 2,
+                    "totalCount": 1
+                }
+            }
+        }
+
+### Search ADDRESS [GET] 
+
++ Request (application/json)
+
+        {
+            "termination": 0,
+            "type": "ADDRESS",
+            "page":1,
+            "rows":10,
+        }
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /table/search/tmp
+
+    + Body
+
+            {
+                "code": 200,
+                "message": "操作成功",
+                "data": {
+                    "dataList": [
+                        {
+                            "addressId": 1,
+                            "userId": 1,
+                            "termination": false,
+                            "importTime": "2019-06-26 22:58:52",
+                            "perNumber": "KKKKKKKK",
+                            "startDate": "2019-06-26 22:58:52",
+                            "endDate": "2019-06-26 22:58:52",
+                            "addressRecordType": "HOUSE",
+                            "streetAndHouseNumber": "SOUTHPARK NO.1"
+                        }
+                    ],
+                    "currentCount": 1,
+                    "page": 2,
+                    "totalCount": 1
+                }
+            }
+
+### Search AGE_GENDER [GET]
+
++ Request (application/json)
+
+        {
+            "termination": 0,
+            "type": "AGE_GENDER",
+            "page":1,
+            "rows":10,
+        }
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /table/search/tmp
+
+    + Body
+
+            {
+                "code": 200,
+                "message": "操作成功",
+                "data": {
+                    "dataList": [
+                        {
+                            "agId": 1,
+                            "userId": 1,
+                            "termination": false,
+                            "importTime": "2019-06-26 23:01:05",
+                            "perNumber": "IIIIIIII",
+                            "startDate": "2019-06-26 23:01:05",
+                            "endDate": "2019-06-26 23:01:05",
+                            "genderKey": "MALE",
+                            "noCh": 1,
+                            "ageOfEmployee": 32,
+                            "maritalStatusKey": "MARRIED"
+                        }
+                    ],
+                    "currentCount": 1,
+                    "page": 2,
+                    "totalCount": 1
+                }
+            }
+            
+### Search BASEPAY_GRADE  [GET]
++ Request (application/json)
+
+        {
+            "termination": 0,
+            "type": "BASEPAY_GRADE",
+            "page":1,
+            "rows":10,
+        }
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /table/search/tmp
+
+    + Body
+
+            {
+            "code": 200,
+            "message": "操作成功",
+            "data": {
+                "dataList": [
+                    {
+                        "basepayId": 6,
+                        "userId": 1,
+                        "termination": false,
+                        "importTime": "2019-06-24 16:21:00",
+                        "perNumber": "QQIIIEEE",
+                        "organizationUnit": "TEQUL",
+                        "startDate": "2019-06-25 00:21:00",
+                        "endDate": "2019-06-25 00:21:00",
+                        "payment": 12.84,
+                        "grade": 9.96663
+                    },
+                    {
+                        "basepayId": 7,
+                        "userId": 1,
+                        "termination": false,
+                        "importTime": "2019-06-24 16:21:06",
+                        "perNumber": "QQIIIEEE",
+                        "organizationUnit": "TEQUL",
+                        "startDate": "2019-06-25 00:21:06",
+                        "endDate": "2019-06-25 00:21:06",
+                        "payment": 12.84,
+                        "grade": 9.96663
+                    },
+                    {
+                        "basepayId": 8,
+                        "userId": 1,
+                        "termination": false,
+                        "importTime": "2019-06-24 16:21:18",
+                        "perNumber": "QQIIDDDE",
+                        "organizationUnit": "TEQUL",
+                        "startDate": "2019-06-25 00:21:18",
+                        "endDate": "2019-06-25 00:21:18",
+                        "payment": 12.84,
+                        "grade": 9.96663
+                    },
+                    {
+                        "basepayId": 9,
+                        "userId": 1,
+                        "termination": false,
+                        "importTime": "2019-06-24 16:21:33",
+                        "perNumber": "PPPPPPPP",
+                        "organizationUnit": "CHIV",
+                        "startDate": "2019-06-25 00:21:33",
+                        "endDate": "2019-06-25 00:21:33",
+                        "payment": 12.84,
+                        "grade": 9.96663
+                    },
+                    {
+                        "basepayId": 10,
+                        "userId": 1,
+                        "termination": false,
+                        "importTime": "2019-06-24 16:21:41",
+                        "perNumber": "PPPPPPPQ",
+                        "organizationUnit": "CHIV",
+                        "startDate": "2019-06-25 00:21:41",
+                        "endDate": "2019-06-25 00:21:41",
+                        "payment": 12.84,
+                        "grade": 9.96663
+                    }
+                ],
+                "currentCount": 5,
+                "page": 2,
+                "totalCount": 11
+            }
+        }
+            
+### Search EDUCATION [GET]
+
++ Request (application/json)
+
+        {
+            "termination": 0,
+            "type": "EDUCATION",
+            "page":1,
+            "rows":10,
+        }
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /table/search/tmp
+
+    + Body
+
+            {
+                "code": 200,
+                "message": "操作成功",
+                "data": {
+                    "dataList": [
+                        {
+                            "eduId": 1,
+                            "userId": 1,
+                            "termination": false,
+                            "importTime": "2019-06-26 23:02:48",
+                            "perNumber": "AAAAAAAA",
+                            "startDate": "2019-06-26 23:02:48",
+                            "endDate": "2019-06-26 23:02:48",
+                            "institution": "FIRST UNIVERSITY",
+                            "location": "SHANGHAI",
+                            "certificate": "BACHELOR",
+                            "major": "COMPUTER SCIENCE"
+                        }
+                    ],
+                    "currentCount": 1,
+                    "page": 2,
+                    "totalCount": 1
+                }
+            }
+
+
+### Search LEAVE_REPORT [GET]
+
++ Request (application/json)
+
+        {
+            "termination": 0,
+            "type": "LEAVE_REPORT",
+            "page":1,
+            "rows":10,
+        }
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /table/search/tmp
+
+    + Body
+
+            {
+                "code": 200,
+                "message": "操作成功",
+                "data": {
+                    "dataList": [
+                        {
+                            "leaveReportId": 1,
+                            "userId": 1,
+                            "termination": false,
+                            "importTime": "2019-06-26 23:04:55",
+                            "perNumber": "BBBBBBBB",
+                            "startDate": "2019-06-26 23:04:55",
+                            "endDate": "2019-06-26 23:04:55",
+                            "startTime": "23:04:55",
+                            "endTime": "23:04:55",
+                            "attendanceOfAbsenceType": 2,
+                            "hours": 4.2,
+                            "totalAbsHours": 3.2,
+                            "totalAbsDays": 2.2
+                        }
+                    ],
+                    "currentCount": 1,
+                    "page": 2,
+                    "totalCount": 1
+                }
+            }
+            
+            
+### Search OT [GET]
+
++ Request (application/json)
+
+        {
+            "termination": 0,
+            "type": "OT",
+            "page":1,
+            "rows":10,
+        }
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /table/search/tmp
+
+    + Body
+
+            {
+                "code": 200,
+                "message": "操作成功",
+                "data": {
+                    "dataList": [
+                        {
+                            "otId": 1,
+                            "userId": 1,
+                            "termination": false,
+                            "importTime": "2019-06-26 23:12:48",
+                            "perNumber": "KKKKKKKK",
+                            "period": "NOW",
+                            "organizationUnit": "PJ/NLI",
+                            "ot10": 1,
+                            "ot15": 2,
+                            "ot20": 3,
+                            "ot30": 4,
+                            "otTotal": 5
+                        }
+                    ],
+                    "currentCount": 1,
+                    "page": 2,
+                    "totalCount": 1
+                }
+            }
+            
+###Modify ACTION_POSITION table [POST]
+
++ Request (application/json)
+
+        {
+            "actionId": 1,
+            "userId": 1,
+            "termination": false,
+            "importTime": "2019-06-26 14:55:32",
+            "perNumber": "LLLLLLLL",
+            "organizationUnit": "TQI",
+            "startDate": "2019-06-26 22:55:32",
+            "endDate": "2019-06-26 22:55:32",
+            "actionType": "RE-HIRING",
+            "reasonForAction": "RESIGNMENT",
+            "last": "2019-06-26 22:55:32",
+            "entry": "2019-06-26 22:55:32",
+            "startDate1": "2019-06-26 22:55:32",
+            "endDate1": "2019-06-26 22:55:32",
+            "position": "MANAGER"
+        }
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+        Location: /table/modify/actionPosition
+
+    + Body
+
+            {
+                "code":200,
+                "message":"操作成功",
+                "data":"修改成功"
+            }
+            
+###Modify ADDRESS table [POST]
+
++ Request (application/json)
+
+        {
+            "addressId": 1,
+            "userId": 1,
+            "termination": false,
+            "importTime": "2019-06-26 22:58:52",
+            "perNumber": "KKKKKKKK",
+            "startDate": "2019-06-26 22:58:52",
+            "endDate": "2019-06-26 22:58:52",
+            "addressRecordType": "HOUSE",
+            "streetAndHouseNumber": "SOUTHPARK NO.1"
+        }
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+        Location: /table/modify/address
+
+    + Body
+
+            {
+                "code":200,
+                "message":"操作成功",
+                "data":"修改成功"
+            }
+            
+###Modify AGE_GENDER table [POST]
+
++ Request (application/json)
+
+        {
+            "agId": 1,
+            "userId": 1,
+            "termination": false,
+            "importTime": "2019-06-26 23:01:05",
+            "perNumber": "IIIIIIII",
+            "startDate": "2019-06-26 23:01:05",
+            "endDate": "2019-06-26 23:01:05",
+            "genderKey": "MALE",
+            "noCh": 1,
+            "ageOfEmployee": 32,
+            "maritalStatusKey": "MARRIED"
+        }
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+        Location: /table/modify/ageGender
+
+    + Body
+
+            {
+                "code":200,
+                "message":"操作成功",
+                "data":"修改成功"
+            }
+            
+###Modify BASEPAY_GRADE table [POST]
+
++ Request (application/json)
+
+        {
+            "basepayId":1,
+            "userId":1,//Could be ignored
+            "termination":false,
+            "importTime":"2019-06-24 14:36:20",//Could be ignored
+            "perNumber":"FFFFFFFF",
+            "organizationUnit":"RBCN/ABC",
+            "startDate":"2019-06-24 22:36:20",
+            "endDate":"2019-06-24 22:36:20",
+            "payment":11.23,
+            "grade":11.23223
+        }
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+        Location: /table/modify/basepayGrade
+
+    + Body
+
+            {
+                "code":200,
+                "message":"操作成功",
+                "data":"修改成功"
+            }
+            
+###Modify EDUCATION table [POST]
+
++ Request (application/json)
+
+        {
+            "eduId": 1,
+            "userId": 1,
+            "termination": false,
+            "importTime": "2019-06-26 23:02:48",
+            "perNumber": "AAAAAAAA",
+            "startDate": "2019-06-26 23:02:48",
+            "endDate": "2019-06-26 23:02:48",
+            "institution": "FIRST UNIVERSITY",
+            "location": "SHANGHAI",
+            "certificate": "BACHELOR",
+            "major": "COMPUTER SCIENCE"
+        }
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+        Location: /table/modify/education
+
+    + Body
+
+            {
+                "code":200,
+                "message":"操作成功",
+                "data":"修改成功"
+            }
+            
+###Modify LEAVE_REPORT table [POST]
+
++ Request (application/json)
+
+        {
+            "leaveReportId": 1,
+            "userId": 1,
+            "termination": false,
+            "importTime": "2019-06-26 23:04:55",
+            "perNumber": "BBBBBBBB",
+            "startDate": "2019-06-26 23:04:55",
+            "endDate": "2019-06-26 23:04:55",
+            "startTime": "23:04:55",
+            "endTime": "23:04:55",
+            "attendanceOfAbsenceType": 2,
+            "hours": 4.2,
+            "totalAbsHours": 3.2,
+            "totalAbsDays": 2.2
+        }
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+        Location: /table/modify/leaveReport
+
+    + Body
+
+            {
+                "code":200,
+                "message":"操作成功",
+                "data":"修改成功"
+            }
+            
+###Modify OT table [POST]
+
++ Request (application/json)
+
+        {
+            "otId": 1,
+            "userId": 1,
+            "termination": false,
+            "importTime": "2019-06-26 23:12:48",
+            "perNumber": "KKKKKKKK",
+            "period": "NOW",
+            "organizationUnit": "PJ/NLI",
+            "ot10": 1,
+            "ot15": 2,
+            "ot20": 3,
+            "ot30": 4,
+            "otTotal": 5
+        }
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+        Location: /table/modify/ot
+
+    + Body
+
+            {
+                "code":200,
+                "message":"操作成功",
+                "data":"修改成功"
+            }
+            
+            
+###Search user status [GET] ->done
+
++ Request (application/json)
+
+        {
+        
+        }
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+        Location: /validate/status
+
+    + Body
+
+            {
+                "code": 200,
+                "message": "操作成功",
+                "data": {
+                    "ACTIVE_EDUCATION": 0,
+                    "TERMINATION_LEAVE_REPORT": 0,
+                    "TERMINATION_AGE_GENDER": 0,
+                    "USER_ID": 1,
+                    "ACTIVE_ACTION_POSITION": 0,
+                    "TERMINATION_EDUCATION": 0,
+                    "ACTIVE_AGE_GENDER": 0,
+                    "TERMINATION_BASEPAY_GRADE": 0,
+                    "ACTIVE_LEAVE_REPORT": 0,
+                    "ACTIVE_OT": 0,
+                    "ACTIVE_ADDRESS": 0,
+                    "TERMINATION_OT": 0,
+                    "TERMINATION_ADDRESS": 0,
+                    "ACTIVE_BASEPAY_GRADE": 0,
+                    "TERMINATION_ACTION_POSITION": 0
+                }
+            }
+            
+
+

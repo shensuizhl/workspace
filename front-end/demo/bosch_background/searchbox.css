@@ -1,0 +1,126 @@
+/* Apply for homepage only */
+
+#WebPartWPQ2 {
+    margin: 24px 24px 0px 0px;
+    padding: 50px 0 20px 0;
+    color: black;
+    background: #fff;
+}
+
+.ms-srch-sb-borderFocused{
+    border-color: #141010 !important;
+}
+
+#search-title {
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 32px;
+    text-align: center;
+    line-height: 38px;
+    font-family: 'Bosch Sans Light';
+    /* color: #fff !important; */
+}
+
+.ms-webpartzone-cell {
+    margin: auto auto;
+}
+
+#MSOZoneCell_WebPartWPQ2 #SearchBox {
+    margin-right: 24px;
+    margin-bottom: 24px;
+    float: none;
+    text-align: center;
+    padding-bottom: 65px;
+    background: #fff;
+    color: black;
+    width: auto;
+}
+
+#MSOZoneCell_WebPartWPQ2 .ms-srch-sb-border {
+    border: none;
+    border-bottom: 3px solid #fff;
+}
+
+#MSOZoneCell_WebPartWPQ2 #SearchBox > div{
+    /* background: #fff; */
+}
+
+#MSOZoneCell_WebPartWPQ2 #SearchBox > div input{
+    color: #141010 !important;
+font-family: 'Bosch Office Sans' !important;
+}
+#MSOZoneCell_WebPartWPQ2 #SearchBox > div > input[type=text]:hover,input[type=text]:focus{
+    border-color: #141010 !important;
+}
+
+#MSOZoneCell_WebPartWPQ3 #SearchBox {
+    margin-right: 24px;
+    margin-bottom: 24px;
+    float: none;
+    text-align: center;
+    padding-bottom: 65px;
+    background: #fff;
+    color: black;
+    width: auto;
+}
+
+#MSOZoneCell_WebPartWPQ3 #SearchBox > div{
+    /* background: #50237F; */
+}
+
+#MSOZoneCell_WebPartWPQ3 #SearchBox > div input{
+    color: #141010 !important; 
+	font-family: 'Bosch Office Sans' !important;
+}
+#MSOZoneCell_WebPartWPQ3 #SearchBox > div > input[type=text]:hover,input[type=text]:focus{
+    border-color: #141010 !important; 
+}
+
+#MSOZoneCell_WebPartWPQ3 .ms-srch-sb-border {
+    border: none;
+    border-bottom: 3px solid black;
+    /* border-bottom: 3px solid #fff; */
+}
+
+#MSOZoneCell_WebPartWPQ4 #SearchBox {
+    margin-right: 24px;
+    margin-bottom: 24px;
+    float: none;
+    text-align: center;
+    padding-bottom: 65px;
+    background: #fff;
+    color: black;
+    width: auto;
+}
+
+#MSOZoneCell_WebPartWPQ4 .ms-srch-sb-border {
+    border: none;
+    border-bottom: 3px solid #141010;
+}
+
+#MSOZoneCell_WebPartWPQ4 #SearchBox > div{
+    /* background: #50237F; */
+}
+
+#MSOZoneCell_WebPartWPQ4 #SearchBox > div > input[type=text]{
+    color: #141010 !important;
+font-family: 'Bosch Office Sans' !important;
+}
+#MSOZoneCell_WebPartWPQ4 #SearchBox > div > input[type=text]:hover,input[type=text]:focus{
+    border-color: #141010 !important;
+}
+
+
+a[id$="_csr_NavButton"]{
+    display: none;
+}
+
+.ms-srch-sbLarge-searchImg {
+    position: static !important;
+    height: 22px;
+    padding: 5px;
+}
+
+.ms-mpSearchBox {
+    display: none;
+}
